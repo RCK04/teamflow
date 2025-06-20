@@ -19,15 +19,8 @@ const TaskSchema = new Schema({
         default: 'pending'
     },
 
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-
-    updatedAt: {
-        type: Date,
-        default: Date.now
-    }
+}, {
+    timestamps: true
 });
 
 const Task = mongoose.model('Task', TaskSchema);
